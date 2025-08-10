@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Demo page showcasing many HTML tags without CSS or JS">
+    <title>HTML Tags Demo</title>
+    <link rel="canonical" href="https://example.com/demo">
+  </head>
+  <body>
+    <header>
+      <h1>HTML Tags Demo</h1>
+      <h2>HTML Tags Demo</h2>
+      <h3>HTML Tags Demo</h3>
+      <h4>HTML Tags Demo</h4>
+      <h5>HTML Tags Demo</h5>
+      <h6>HTML Tags Demo</h6>
+   
+      <p>Demonstration of semantic HTML elements and form controls (no CSS/JS).</p>
+      <nav>
+        <a href="#intro">Introduction</a> |
+        <a href="#media">Media</a> |
+        <a href="#forms">Forms</a> |
+        <a href="#table">Table</a> |
+        <a href="#footer">Footer</a>
+      </nav>
+
+    </header>
+
+    <main>
+      <article id="intro">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <p>This article contains examples of many HTML elements. Use the table of contents above to jump between sections.</p>
+        <section>
+          <h3>Text Formatting</h3>
+          <p><strong>Strong text</strong>, <em>emphasized text</em>, <b>visual bold</b>, <i>visual italic</i>.</p>
+          <p>Inline elements like <mark>marked text</mark>, <small>small text</small>, and <del>deleted</del> are shown here.</p>
+        </section>
+
+        <section>
+          <h3>Lists</h3>
+          <ol>
+            <li>First ordered item</li>
+            <li>Second item with nested list
+              <ul>
+                <li>Nested unordered item</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+      </article>
+
+      <aside>
+        <h4>Related</h4>
+        <p>Quick links and notes.</p>
+        <details>
+          <summary>More links</summary>
+          <ul>
+            <li><a href="#forms">Forms section</a></li>
+            <li><a href="#media">Media section</a></li>
+          </ul>
+        </details>
+      </aside>
+
+      <section id="media">
+        <h2>Media</h2>
+        <figure>
+          <img src="https://via.placeholder.com/150" alt="Placeholder image">
+          <figcaption>Example image with caption.</figcaption>
+        </figure>
+
+        <h3>SVG Example</h3>
+        <svg width="200" height="80" role="img" aria-label="Simple shapes">
+          <rect x="0" y="0" width="200" height="80" fill="#eee"></rect>
+          <circle cx="40" cy="40" r="30"></circle>
+          <text x="80" y="45">SVG Text</text>
+        </svg>
+
+        <h3>Audio & Video</h3>
+        <p>Audio:</p>
+        <audio controls>
+          <source src="audio-sample.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Video:</p>
+        <video width="620" height="640" controls>
+          <source src="video-sample.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </section>
+
+      <section id="forms">
+        <h2>Forms & Controls</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Personal Info</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"><br>
+
+            <label for="birth">Birthday:</label>
+            <input type="date" id="birth" name="birth"><br>
+
+            <label for="color">Favorite color:</label>
+            <input type="color" id="color" name="color" value="#ff0000"><br>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" cols="40">Short bio...</textarea><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="g1" name="gender" value="male"><label for="g1">Male</label>
+            <input type="radio" id="g2" name="gender" value="female"><label for="g2">Female</label><br>
+
+            <label for="agree">Agree to terms:</label>
+            <input type="checkbox" id="agree" name="agree"><br>
+
+            <label for="file">Upload file:</label>
+            <input type="file" id="file" name="file" accept="image/*,.pdf"><br>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Survey</legend>
+            <label for="satisfaction">Satisfaction:</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" value="5"><br>
+
+            <label for="progress">Progress:</label>
+            <progress id="progress" value="70" max="100">70%</progress><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" value="1"><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
+
+        <h3>Output Example</h3>
+        <output name="result">Calculation result appears here (requires JS to update).</output>
+      </section>
+
+      <section id="table">
+        <h2>Table Example</h2>
+        <table border="1">
+          <caption>Sample Data</caption>
+          <thead>
+            <tr><th>Name</th><th>Role</th><th>Age</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aman</td><td>Developer</td><td>24</td></tr>
+            <tr><td>Sana</td><td>Designer</td><td>26</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="2">Total</td><td>50</td></tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2>Embedding Content</h2>
+        <p>Iframe (sandboxed):</p>
+        <iframe title="Empty frame" src="about:blank" sandbox width="300" height="100">Fallback content for older browsers</iframe>
+
+        <p>Object/embed example (fallback):</p>
+        <object data="sample.pdf" type="application/pdf" width="300" height="200">
+          <p>PDF cannot be displayed. You can <a href="sample.pdf">download it</a>.</p>
+        </object>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2025 Example. <a href="#top">Back to top</a></p>
+      <nav>
+        <a href="#intro">Intro</a> |
+        <a href="#forms">Forms</a>
+      </nav>
+    </footer>
+
+    <noscript>
+      <p>This page works best with JavaScript enabled. Some interactive features may not function without it.</p>
+    </noscript>
+  </body>
+</html>
